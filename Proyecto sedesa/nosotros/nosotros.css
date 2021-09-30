@@ -1,0 +1,288 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}/*Sirve para colocar todo sin que se rompa*/
+body{
+    background-color:azure;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*Estilos generales del cuerpo*/
+}/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
+/*logo*/
+.container{
+    float: right;
+}
+/*el div de la cabecera*/
+.div{
+    float:inline-end;
+}/*la cabecera*/
+header{
+    width: 100%;
+    height: 100px;
+background: linear-gradient(to left, white 20%,rgb(66, 141, 211));
+}/*el check-boton*/
+#btn-menu{
+    display: none;
+}/*desaparece y edita la barra de mení*/
+header label{
+    display: none;
+    width:50px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 50px;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    float: left;
+}
+/*cuando aparece hace un hover*/
+header label:hover{
+cursor:pointer;
+background-color: rgba(0, 0, 0, 0.3);
+}/*Acomoda la imagen del logo*/
+.imga{
+   width: 100%;
+    height: 100px;
+border: none;
+}/*posiciona el navegador de botones*/
+.container-ul{
+    position: relative;
+    top: 60px;
+}
+/*Se edita el listado de links*/
+ .ulist{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    display: flex;
+    justify-content:left;
+}/*se le edita a cada enlace un recuadro blanca*/
+ .ulist li{
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    width:20%
+}
+/*Se edita el tamaño de la barra de menu*/
+.img2{
+    width: 30px;
+    height: 30px;
+}
+/*Se editan los botones para que aparezcan animados*/
+.ulist li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*Es para los bloques del menú*/
+ .ulist li a{
+    
+    display: block;
+    padding:10px 10px;
+    color: blue;
+    text-decoration: none;
+    
+}/*Si el tamaño es de 700 px*/
+@media (max-width:700px){
+    header label{
+        display:block;
+    }/*El menu aparece*/
+    .menu{
+        top: 100px;
+        position: absolute;
+        z-index: 100;
+        background:linear-gradient(to left,white, rgb(66, 141, 211));
+width: 30%;
+        margin-left: -30%;
+        transition: all 0.5s;
+        
+    }/*Muestra el menu en forma de columna*/
+ .menu   .ulist{
+        flex-direction: column;
+        position:relative;
+       bottom:60px; 
+    }/*Les crea un borde*/
+    .ulist li{
+        border-top: 1px solid white;
+        width: 100%;
+    }/*Les permite crear una animación*/
+    .ulist li:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }/*cuando se hace "check" se activa el menu*/
+    #btn-menu:checked~.menu{
+        margin:0;
+    }
+}
+.container-s{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+margin: 0px;
+padding: 0px;
+}
+main{
+    padding: 0;
+    margin: 0;
+    
+}
+.container-s:before{
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background-color:rgb(66, 141, 211);
+    position: absolute;
+    opacity: 0.5;  
+}
+.container-third{
+    position: absolute;
+    background:radial-gradient(white, rgb(66, 141, 211));
+    color: navy;
+    text-align: center;
+    width: 30%;
+    height: 35px;
+    top: 35%;
+    left: 35%
+}
+.trabajo{
+    width: 100%;
+    height: 50vh;
+}
+.container-first{
+    margin: 0%;
+    padding: 0;
+
+}
+.container-text{
+    display: flex;
+padding: 20px;
+margin: 20px;
+}
+.first-text{
+    margin-top: 5px;
+    width: 50%;
+    padding: 20px;
+border-right: 1px solid black;
+}
+.second-text{
+    margin-top: 20px;
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+/*Footer*/
+.footer{
+    margin: 0;
+    padding: 0;
+}
+.container-footer{
+    background-color: black;
+    color: white;
+    height: 60vh;
+    }
+    .caf{
+    margin: 0;
+    padding: 0;
+text-align: center;
+}
+.cbf{
+    display: flex;
+    top: 70px;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 35%;
+
+}
+.ccf{
+    padding-right: 2%;
+}
+.cdf{
+    border-left: 2px solid white;
+}
+.ucdf li{
+margin-left: 10px;
+    padding: 5px;
+    list-style:none
+}
+@media(max-width:700px){
+    .cbf{
+        padding-left: 10%;
+    }
+}     /*Redes sociales*/
+     /*No se muestra el boton*/
+     #btn-mas{
+        display: none;
+    }/*El contenedor de todos los contactos*/
+    .container-all{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }/*Edicion de los enlaces y del label*/
+    .net a, .btn-mas label{
+        display: block;
+        text-decoration: none;
+        background: navy;
+        color:white;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 4);
+        transition: all 500ms ease;
+    }/*Se muestra una pequeña animación*/
+    .net a:hover{
+        background: white;
+        color: blue;
+    }/*Se oculta el menu*/
+    .net a{
+        margin-bottom: -15px;
+        opacity: 0;
+        visibility: hidden;
+    }/*Si el btn está checked, aparece el menu*/
+    #btn-mas:checked~.net a{
+        margin-bottom: 10px;
+        opacity: 1;
+        visibility: visible;
+    }/*Botón de whatsapp*/
+    .wsp{
+        display: block;
+       width: 55px;
+       height: 55px;
+       line-height: 55px;
+       position: relative;
+       border-radius: 50px;
+       text-align: center;
+       box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+       }/*Hace una animación al estar presionado*/
+       .wsp:hover{
+           cursor: pointer;
+           background-color: rgba(0, 100, 0, 100);
+       }/*Botón de whatsapp*/
+       .wsp-a{
+               display: block;
+               width: 55px;
+               height: 55px;
+               line-height: 55px;
+               border-radius: 50px;
+               text-align: center;
+               box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+       }/*Botón de email*/
+       .email{
+           display: block;
+           width: 60px;
+           height: 60px;   
+       }/*El tamaño de la letra de "contactos"*/
+       .btn-mas label{
+           font-size: small;
+       }/*Spans*/
+       .a ,.b,.c,.d{
+           position: relative;
+           right: 60px;
+           bottom: 50px;
+           background-color: rgb(66, 141, 211);
+       }
+       

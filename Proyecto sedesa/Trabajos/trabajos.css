@@ -1,0 +1,833 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}/*Sirve para colocar todo sin que se rompa*/
+body{
+    background-color:azure;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*Estilos generales del cuerpo*/
+}/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
+/*logo*/
+.container{
+    float: right;
+}
+/*el div de la cabecera*/
+.div{
+    float:inline-end;
+}/*la cabecera*/
+header{
+    width: 100%;
+    height: 100px;
+background: linear-gradient(to left, white 20%,rgb(66, 141, 211));
+}/*el check-boton*/
+#btn-menu{
+    display: none;
+}/*desaparece y edita la barra de mení*/
+header label{
+    display: none;
+    width:50px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 50px;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    float: left;
+}
+/*cuando aparece hace un hover*/
+header label:hover{
+cursor:pointer;
+background-color: rgba(0, 0, 0, 0.3);
+}/*Acomoda la imagen del logo*/
+.imga{
+   width: 100%;
+    height: 100px;
+border: none;
+}/*posiciona el navegador de botones*/
+.container-ul{
+    position: relative;
+    top: 60px;
+}
+/*Se edita el listado de links*/
+ .ulist{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    display: flex;
+    justify-content:left;
+}/*se le edita a cada enlace un recuadro blanca*/
+ .ulist li{
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    width:20%
+}
+/*Se edita el tamaño de la barra de menu*/
+.img2{
+    width: 30px;
+    height: 30px;
+}
+/*Se editan los botones para que aparezcan animados*/
+.ulist li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*Es para los bloques del menú*/
+ .ulist li a{
+    
+    display: block;
+    padding:10px 10px;
+    color: blue;
+    text-decoration: none;
+    
+}/*Si el tamaño es de 700 px*/
+@media (max-width:700px){
+    header label{
+        display:block;
+    }/*El menu aparece*/
+    .menu{
+        top: 100px;
+        position: absolute;
+        z-index: 100;
+        background:linear-gradient(to left,white, rgb(66, 141, 211));
+width: 30%;
+        margin-left: -30%;
+        transition: all 0.5s;
+        
+    }/*Muestra el menu en forma de columna*/
+ .menu   .ulist{
+        flex-direction: column;
+        position:relative;
+       bottom:60px; 
+    }/*Les crea un borde*/
+    .ulist li{
+        border-top: 1px solid white;
+        width: 100%;
+    }/*Les permite crear una animación*/
+    .ulist li:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }/*cuando se hace "check" se activa el menu*/
+    #btn-menu:checked~.menu{
+        margin:0;
+    }
+}
+
+/*main*/
+.service{
+    padding: 5px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-left: 31%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+    color: blue;
+    width:45%;
+    text-align: center;
+}
+.container-a{
+    margin-top: 50px;
+position: relative;
+height: 50vh;
+background: linear-gradient(to right,white 50%, rgb(66, 141, 211));
+}
+.container-b{
+    position: absolute;
+}
+.container-c{
+    width: 100%;
+    height: 50vh;
+}
+.container-d{
+    top: 40%;
+    right: 100px;
+    position: absolute;
+    width: 50%;
+    color: navy;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+@media(max-width:1000px){
+    .container-c{
+        width: 60%;
+    }
+    .container-d{
+        top: 80px;
+    
+    margin-right: -90px;
+    }
+}
+@media(max-width:700px){
+    .container-c{
+        width: 45%;
+    
+    }
+    .container-d{
+        top:25%;
+        margin-left: auto;
+        width: 50%;
+        font-size: 1rem;
+    }
+}
+/*Slider*/
+.first{
+    width: 100%;
+ display: flex;
+ height: 60vh;
+ margin-top: 50px;
+ margin-bottom: 50px;
+background: linear-gradient(to left,white 65% , rgb(66, 141, 211)); 
+}
+.text1{
+    margin-left: 20px;
+    color: navy;
+margin-top: 100px;
+}
+.p1{
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.slider-first{
+    overflow: hidden;
+}
+.li-fi img{
+width: 100%;
+height: 100%;
+}
+.ul-first{
+    padding: 0;
+    display: flex;
+    width: 200%;
+    animation: cambio 10s infinite alternate;
+}
+.li-fi{
+    list-style: none;
+    width: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;height
+        : 100%;}
+    45%{margin-left: 0; height: 100%;}
+    
+    50%{margin-left: -100%;
+    height: 100%;
+}
+    100%{margin-left: -100%;
+    height: 100%;}
+}
+.text1{
+width: 50%;
+}
+slider-first{
+    width: 50%;
+}
+/*Segundo slider*/
+.second{
+width: 100%;
+ display: flex;
+ height: 60vh;
+ margin-top: 50px;
+ margin-bottom: 50px;
+ margin-right: 0px;
+
+}
+.text2{
+    margin: 0;
+    color: navy;
+padding-top: 100px;
+margin-left: 70px;
+background: linear-gradient(to right,white  , rgb(66, 141, 211)); 
+}
+.p2{
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.slider-second{
+    overflow: hidden;
+}
+.li-se img{
+width: 100%;
+height: 100%;
+}
+.ul-second{
+    padding: 0;
+    display: flex;
+    width: 200%;
+    animation: cambio 10s infinite alternate;
+}
+.li-se{
+    list-style: none;
+    width: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;height
+        : 100%;}
+    45%{margin-left: 0; height: 100%;}
+    
+    50%{margin-left: -100%;
+    height: 100%;
+}
+    100%{margin-left: -100%;
+    height: 100%;}
+}
+.text2{
+width: 50%;
+}
+slider-second{
+    width: 50%;
+}
+/*Slider tercero*/
+.third{
+    width: 100%;
+ display: flex;
+ height: 60vh;
+ margin-top: 50px;
+ margin-bottom: 50px;
+background: linear-gradient(to left,white 65% , rgb(66, 141, 211)); 
+}
+.text3{
+    margin-left: 20px;
+    color: navy;
+margin-top: 30px;
+}
+.p3{
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.slider-third{
+    overflow: hidden;
+}
+.li-th img{
+width: 100%;
+height: 100%;
+}
+.ul-third{
+    padding: 0;
+    display: flex;
+    width: 300%;
+    animation: cambiop 10s infinite alternate;
+}
+.li-th{
+    list-style: none;
+    width: 100%;
+}
+@keyframes cambiop{
+    0%{margin-left: 0;height
+        : 100%;}
+    45%{margin-left: 0; height: 100%;}
+    
+    60%{margin-left: -100%;
+    height: 100%;
+}
+80%{
+    margin-left: -100%;
+    height: 100%;
+
+}90%{margin-left: -200%;
+    height: 100%;}
+    100%{margin-left: -200%;
+    height: 100%;}
+}
+.text3{
+width: 50%;
+}
+slider-third{
+    width: 50%;
+}
+/*Slider 4*/
+
+.fourth{
+    width: 100%;
+     display: flex;
+     height: 60vh;
+     margin-top: 50px;
+     margin-bottom: 50px;
+     margin-right: 0px;
+    
+    }
+    .text4{
+        margin: 0;
+        color: navy;
+    padding-top: 20px;
+    margin-left: 70px;
+    background: linear-gradient(to right,white  , rgb(66, 141, 211));
+
+    }
+    .hd4{
+        font-size: .9rem;
+    }
+    .p4{
+        margin-top: 30px;
+        
+        font-weight: bold;
+    }
+    .slider-fourth{
+        overflow: hidden;
+    }
+    .li-fo img{
+    width: 100%;
+    height: 100%;
+    }
+    .ul-fourth{
+        padding: 0;
+        display: flex;
+        width: 400%;
+        animation: cambioa 10s infinite alternate;
+    }
+    .li-fo{
+        list-style: none;
+        width: 100%;
+    }
+    @keyframes cambioa{
+
+        0%{margin-left: 0; height: 100%;}
+        20%{margin-left: 0;height: 100%;}
+        
+        25%{margin-left: -100%;height: 100%;}
+        45%{margin-left: -100%;height: 100%;}
+        50%{margin-left: -200%;
+        height: 100%;}
+        70%{margin-left: -200%;
+        height: 100%;}
+    
+        75%{margin-left: -300%;height: 100%;}
+        100%{margin-left: -300%;height: 100%;}
+        
+    }
+    .text4{
+    width: 50%;
+    }
+    slider-fourth{
+        width: 50%;
+    }
+   @media(max-width: 1000px){
+hd4{
+    margin-top: 20px;
+    font-size: 10px;
+}
+   } 
+   /*Slider5*/
+   .fifth{
+    width: 100%;
+ display: flex;
+ height: 60vh;
+ margin-top: 50px;
+ margin-bottom: 50px;
+background: linear-gradient(to left,white 65% , rgb(66, 141, 211)); 
+}
+.text5{
+    margin-left: 20px;
+    color: navy;
+margin-top: 100px;
+}
+.p5{
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.slider-fifth{
+    overflow: hidden;
+}
+.li-fift img{
+width: 100%;
+height: 100%;
+}
+.ul-fifth{
+    padding: 0;
+    display: flex;
+}
+.li-fift{
+    list-style: none;
+    width: 100%;
+}
+.text5{
+width: 50%;
+}
+slider-fifth{
+    width: 50%;
+}
+@media(max-width:1000px){
+.text5{
+    margin-top: 20px;
+}
+}
+/*Sexto*/
+.sixth{
+    width: 100%;
+     display: flex;
+     height: 60vh;
+     margin-top: 50px;
+     margin-bottom: 50px;
+     margin-right: 0px;
+    
+    }
+    .text6{
+        margin: 0;
+        color: navy;
+    padding-top: 100px;
+    margin-left: 70px;
+    background: linear-gradient(to right,white  , rgb(66, 141, 211)); 
+    }
+    .p6{
+        margin-top: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .slider-sixth{
+        overflow: hidden;
+    }
+    .li-si img{
+    width: 100%;
+    height: 100%;
+    }
+    .ul-sixth{
+        padding: 0;
+        display: flex;
+        width: 200%;
+        animation: cambio 10s infinite alternate;
+    }
+    .li-si{
+        list-style: none;
+        width: 100%;
+    }
+    @keyframes cambio{
+        0%{margin-left: 0;height
+            : 100%;}
+        45%{margin-left: 0; height: 100%;}
+        
+        50%{margin-left: -100%;
+        height: 100%;
+    }
+        100%{margin-left: -100%;
+        height: 100%;}
+    }
+    .text6{
+    width: 50%;
+    }
+    slider-sixth{
+        width: 50%;
+    }
+    /*Siete*/
+    
+.seventh{
+    width: 100%;
+ display: flex;
+ height: 60vh;
+ margin-top: 50px;
+ margin-bottom: 50px;
+background: linear-gradient(to left,white 65% , rgb(66, 141, 211)); 
+}
+.text7{
+    margin-left: 20px;
+    color: navy;
+margin-top: 100px;
+}
+.p7{
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.slider-seventh{
+    overflow: hidden;
+}
+.li-sev img{
+width: 100%;
+height: 100%;
+}
+.ul-seventh{
+    padding: 0;
+    display: flex;
+    width: 200%;
+    animation: cambio 10s infinite alternate;
+}
+.li-sev{
+    list-style: none;
+    width: 100%;
+}
+@keyframes cambio{
+    0%{margin-left: 0;height
+        : 100%;}
+    45%{margin-left: 0; height: 100%;}
+    
+    50%{margin-left: -100%;
+    height: 100%;
+}
+    100%{margin-left: -100%;
+    height: 100%;}
+}
+.text7{
+width: 50%;
+}
+slider-seventh{
+    width: 50%;
+}
+
+/*Ocho*/
+.eighth{
+    width: 100%;
+     display: flex;
+     height: 60vh;
+     margin-top: 50px;
+     margin-bottom: 50px;
+     margin-right: 0px;
+    
+    }
+    .text8{
+        margin: 0;
+        color: navy;
+    padding-top: 100px;
+    margin-left: 70px;
+    background: linear-gradient(to right,white  , rgb(66, 141, 211)); 
+    }
+    .p8{
+        margin-top: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .slider-eighth{
+        overflow: hidden;
+    }
+    .li-ei img{
+    width: 100%;
+    height: 100%;
+    }
+    .ul-eighth{
+        padding: 0;
+        display: flex;
+        width: 300%;
+        animation: cambior 10s infinite alternate;
+    }
+    .li-ei{
+        list-style: none;
+        width: 100%;
+    }
+    @keyframes cambior{ 0%{margin-left: 0;height
+        : 100%;}
+    45%{margin-left: 0; height: 100%;}
+    
+    60%{margin-left: -100%;
+    height: 100%;
+}
+80%{
+    margin-left: -100%;
+    height: 100%;
+
+}90%{margin-left: -200%;
+    height: 100%;}
+    100%{margin-left: -200%;
+    height: 100%;}
+    }
+    .text8{
+    width: 50%;
+    }
+    slider-eighth{
+        width: 50%;
+    }
+/*Nueve*/
+    .nineth{
+        width: 100%;
+     display: flex;
+     height: 60vh;
+     margin-top: 50px;
+     margin-bottom: 50px;
+    background: linear-gradient(to left,white 65% , rgb(66, 141, 211)); 
+    }
+    .text9{
+        margin-left: 20px;
+        color: navy;
+    margin-top: 100px;
+    }
+    .p9{
+        margin-top: 50px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .slider-nineth{
+        overflow: hidden;
+    }
+    .li-ni img{
+    width: 100%;
+    height: 100%;
+    }
+    .ul-nineth{
+        padding: 0;
+        display: flex;
+        width: 200%;
+        animation: cambio 10s infinite alternate;
+    }
+    .li-ni{
+        list-style: none;
+        width: 100%;
+    }
+    @keyframes cambio{
+        0%{margin-left: 0;height
+            : 100%;}
+        45%{margin-left: 0; height: 100%;}
+        
+        50%{margin-left: -100%;
+        height: 100%;
+    }
+        100%{margin-left: -100%;
+        height: 100%;}
+    }
+    .text9{
+    width: 50%;
+    }
+    slider-nineth{
+        width: 50%;
+    }
+
+    /*Diez*/
+    .tenth{
+        width: 100%;
+         display: flex;
+         height: 60vh;
+         margin-top: 50px;
+         margin-bottom: 50px;
+         margin-right: 0px;
+        
+        }
+        .text10{
+            margin: 0;
+            color: navy;
+        padding-top: 100px;
+        margin-left: 70px;
+        background: linear-gradient(to right,white  , rgb(66, 141, 211)); 
+        }
+        .p10{
+            margin-top: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .diez{
+        max-width: 100%;
+        width: 700px;
+        height: 100%;
+        }
+        
+        .text10{
+        width: 100%;
+        }
+        slider-tenth{
+            width: 100%;
+        }
+    /*Footer*/
+.footer{
+    margin-top: 50px;
+    padding-top: 50px;
+}
+.container-footer{
+    background-color: black;
+    color: white;
+    height: 60vh;
+    }
+    .caf{
+    margin: 0;
+    padding: 0;
+text-align: center;
+}
+.cbf{
+    display: flex;
+    top: 70px;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 35%;
+
+}
+.ccf{
+    padding-right: 2%;
+}
+.cdf{
+    border-left: 2px solid white;
+}
+.ucdf li{
+margin-left: 10px;
+    padding: 5px;
+    list-style:none
+}
+@media(max-width:700px){
+    .cbf{
+        padding-left: 10%;
+    }
+}    
+
+
+
+#btn-mas{
+    display: none;
+}/*El contenedor de todos los contactos*/
+.container-all{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}/*Edicion de los enlaces y del label*/
+.net a, .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: navy;
+    color:white;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 4);
+    transition: all 500ms ease;
+}/*Se muestra una pequeña animación*/
+.net a:hover{
+    background: white;
+    color: blue;
+}/*Se oculta el menu*/
+.net a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}/*Si el btn está checked, aparece el menu*/
+#btn-mas:checked~.net a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}/*Botón de whatsapp*/
+.wsp{
+    display: block;
+   width: 55px;
+   height: 55px;
+   line-height: 55px;
+   position: relative;
+   border-radius: 50px;
+   text-align: center;
+   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+   }/*Hace una animación al estar presionado*/
+   .wsp:hover{
+       cursor: pointer;
+       background-color: rgba(0, 100, 0, 100);
+   }/*Botón de whatsapp*/
+   .wsp-a{
+           display: block;
+           width: 55px;
+           height: 55px;
+           line-height: 55px;
+           border-radius: 50px;
+           text-align: center;
+           box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+   }/*Botón de email*/
+   .email{
+       display: block;
+       width: 60px;
+       height: 60px;   
+   }/*El tamaño de la letra de "contactos"*/
+   .btn-mas label{
+       font-size: small;
+   }/*Spans*/
+   .a ,.b,.c,.d{
+       position: relative;
+       right: 60px;
+       bottom: 50px;
+       background-color: rgb(66, 141, 211);
+   }
+   

@@ -1,0 +1,631 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/*Sirve para colocar todo sin que se rompa*/
+body{
+    background-color:azure;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*Estilos generales del cuerpo*/
+}/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
+/*logo*/
+.container{
+    float: right;
+}
+.container-second{
+    padding: 5px;
+    padding-left: 20px;
+    margin-left: 31%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+    color: blue;
+    width:45%
+}
+.container-second h1{
+    align-items:center;
+}
+/*el div de la cabecera*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}/*Sirve para colocar todo sin que se rompa*/
+body{
+    background-color:azure;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*Estilos generales del cuerpo*/
+}/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
+/*logo*/
+.container{
+    float: right;
+}
+/*el div de la cabecera*/
+.div{
+    float:inline-end;
+}/*la cabecera*/
+header{
+    width: 100%;
+    height: 100px;
+background: linear-gradient(to left, white 20%,rgb(66, 141, 211));
+}/*el check-boton*/
+#btn-menu{
+    display: none;
+}/*desaparece y edita la barra de mení*/
+header label{
+    display: none;
+    width:50px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 50px;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    float: left;
+}
+/*cuando aparece hace un hover*/
+header label:hover{
+cursor:pointer;
+background-color: rgba(0, 0, 0, 0.3);
+}/*Acomoda la imagen del logo*/
+.imga{
+   width: 100%;
+    height: 100px;
+border: none;
+}/*posiciona el navegador de botones*/
+.container-ul{
+    position: relative;
+    top: 60px;
+}
+/*Se edita el listado de links*/
+ .ulist{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    display: flex;
+    justify-content:left;
+}/*se le edita a cada enlace un recuadro blanca*/
+ .ulist li{
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    width:20%
+}
+/*Se edita el tamaño de la barra de menu*/
+.img2{
+    width: 30px;
+    height: 30px;
+}
+/*Se editan los botones para que aparezcan animados*/
+.ulist li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*Es para los bloques del menú*/
+ .ulist li a{
+    
+    display: block;
+    padding:10px 10px;
+    color: blue;
+    text-decoration: none;
+    
+}/*Si el tamaño es de 700 px*/
+@media (max-width:700px){
+    header label{
+        display:block;
+    }/*El menu aparece*/
+    .menu{
+        top: 100px;
+        position: absolute;
+        z-index: 100;
+        background:linear-gradient(to left,white, rgb(66, 141, 211));
+width: 30%;
+        margin-left: -30%;
+        transition: all 0.5s;
+        
+    }/*Muestra el menu en forma de columna*/
+ .menu   .ulist{
+        flex-direction: column;
+        position:relative;
+       bottom:60px; 
+    }/*Les crea un borde*/
+    .ulist li{
+        border-top: 1px solid white;
+        width: 100%;
+    }/*Les permite crear una animación*/
+    .ulist li:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }/*cuando se hace "check" se activa el menu*/
+    #btn-menu:checked~.menu{
+        margin:0;
+    }
+}
+/*El botón de whatsapp*/
+/*La imagen de trabajo*/
+.img-a{
+    width: 100%;
+    margin: 0;
+    left: 0;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+ }/*El div que contiene todos*/
+ .container-a{
+    
+    width: 100%;
+height: 90vh;
+    position:relative;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,white,80%,rgb(66, 141, 211));        
+ } /*el div que contiene todo lo que está dentro de la imagen*/
+ .container-b{
+     background-color: white;
+     position:absolute;
+width:50%;
+ }/*El container que tiene el texto*/
+ .container-c{
+     position:relative;
+width:50%;
+float: right;
+}/*El container que tiene todo el subtitulo*/
+.container-c h2{
+    margin-left: 20%;
+    margin-top: 0 ;
+    margin-bottom: 0;
+    color: blue;
+}/*El container que tiene todo el listado*/
+ .container-d{
+position: relative;
+    width: 50%;
+float:left;
+/**/
+ }/*El listado*/
+  .ul-a {
+color: blue;
+list-style:none;
+
+font-size:1.8rem;
+margin-left: 20%;
+ }/*Cada punto de la lista*/
+ .ul-a li{
+     padding: 10px;
+ }/*Se coloca una palomita de color azul en cada lista*/
+ .ul-a li::before{
+    content: "\2714"; /* Insertamos el marcador */
+    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+    color:BLUE; /* Coloreamos la viñeta */
+ }/*edita el div de limpieza y desinfectado*/
+ @media (max-width:800px){
+     .container-c{
+         font-size: 1.5rem;
+     }
+     
+    .ul-a{
+        font-size: 1.4rem; 
+       
+    }
+     }
+     @media (max-width:780px){
+        .container-c{
+            font-size: 1.2rem;
+        }
+        
+       .ul-a{
+           padding-top: 20px;
+           font-size: 2rem; 
+          
+       }
+        }
+ 
+ .container-e{
+     margin-top: 5%;
+     background: linear-gradient(to left,white  40%,rgb(66, 141, 211));
+     position: relative;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 70vh;
+ }/*Texto*/
+ .container-f{
+     position:absolute;
+     right: 0;
+     width: 30%;
+ }/*Imagen*/
+ .img-b{
+     width:100%;
+     height: 70vh;
+     padding-top: 20px;
+ }/*El titulo*/
+ .head-a{
+     padding-top: 20px;
+     color:blue;
+     font-size: 1.6rem;
+     }/*El estilo de las listas*/
+ 
+     .ul-b li{
+font-size: 2rem;
+color: blue;
+list-style:none;
+padding: 8px;
+     }/*La palomita*/
+     .ul-b li::before{
+        content: "\2714"; /* Insertamos el marcador */
+        padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+        color:blue; /* Coloreamos la viñeta */
+     }/*Subtitulo*/
+     .container1{
+        padding: 5px;
+        padding-left: 20px;
+        margin-left: 31%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+        color: blue;
+        width:45%;
+        text-align: center; 
+     }/*El recuadro de la disponibilidad*/
+     .container-i{
+         margin-top:50px ;
+        width: 100%;
+        height: 70vh;
+            position:relative;
+            top: 0;
+            left: 0;
+                 
+     }/*Imagen transparente*/
+     .container-j{
+         position: relative;
+         width: 100%;
+         height: 70vh;
+
+     }/*Imagen el color*/
+     .container-j:before{
+content: "";
+width: 100%;
+height: 70vh;
+background-color:rgb(66, 141, 211);
+position: absolute;
+opacity: 0.8;
+     }/*La imagen en sí*/
+     .img-c{
+        width:100%;
+        height: 70vh;
+        padding-top: 20px;
+        
+     }
+/*Todo el interior de la tabla*/
+     .container-k{
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         display: flex;
+     }/*Bordes de los contenedores*/
+     .container-l, .container-m,.container-n{
+         border-right: 1px solid white;
+     }/*Todos los contenedores*/
+     .container-l,.container-m,.container-n,.container-o{
+        position: relative;
+        width: 25%;
+         text-align: center;
+         
+     }
+     /*El texto del primer recuadro*/
+     .head-c,.p-a{
+         position: relative;
+         top:30%;
+         color: white;
+     }
+     .p-a{
+         top: 150px;
+     }
+     /*El texto del segundo recuadro*/
+     .head-d, .span-e,.span-f{
+        position: relative;
+        top:30%;
+        color: white;
+     }
+     /*Los nombres de los fundadores*/
+     .span-e,.span-f{
+         display: block;
+         top: 40%;
+     }/*Titulo*/
+     .head-e{
+        color: white;
+    }
+       /*Experiencia*/
+     .head-e ,.p-b {
+        position: relative;
+        top:30%;
+        color: white;
+     }.p-b{
+         top: 40%;
+     }
+     /*El icono del calendario*/
+     .icon-calendar-check-o{
+        position: relative;
+        top: 20%;
+       font-size: 50px; 
+       color: white;      
+    
+     }
+     /*Recuadro del correo*/
+    .head-f, .boton-e{
+        position: relative;
+        top: 25%;
+            }/*Titulo del correo*/
+            .head-f{
+                color: white;
+            top: 30%;
+            }/*Botón de correo*/
+     .boton-e{
+         top: 50%;
+         background-color:rgb(0, 225, 255);
+         padding: 10px;
+         border:10px;
+         border-radius: 10px;
+         margin-left: 10px;
+         box-shadow: 20px 0px 0px transparent;
+         color: white;
+         text-decoration: none;
+         
+     }/*Botón de correo*/
+     .boton-e:hover{
+         color :rgb(0, 225, 255);
+         background-color: white;
+     }/*Dibujo del reloj del ´primer recuadro*/
+     .icon-clock{
+         position: relative;
+         top: 20%;
+        font-size: 50px; 
+        color: white;      
+     }/*Dibujo del Segundo recuadro*/
+     .icon-users{
+         position: relative;
+         top: 20%;
+        font-size: 50px;
+    color: white; 
+    }
+    
+/*Servicios titulo*/
+    .servicios1{
+        padding: 5px;
+        padding-left: 20px;
+        margin-left: 31%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+        color: blue;
+        width:45%;
+        text-align: center; 
+    
+    }
+    /*Servicios*/
+.servicios{
+    margin-top: 60px;
+    width: 100%; 
+    }/*Primer recuadro*/
+    .first, .second{
+        display: flex;   
+    }/*Las imagenes*/
+    .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
+        width: 100%;
+        border-radius: 100%;
+        border-bottom: 2px ;
+    }/*El background de las imagenes*/
+    .caa,.cba,.cca,.cda,.cea,.cfa,.cga,.cga,.cha,.cia,.cja{
+        background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+        }/*Imagenes chicas*/
+    .img,.imi,.imj,.ime{
+        margin-top: 60px;
+    }/*Image chica*/
+    .ima{
+        margin-top: 75px;
+    
+    }/*EL divde todos los colectores*/
+    .ca,.cb,.cc,.cd,.ce,.cf,.cg,.cg,.ch,.ci,.cj{
+        height: 90vh;
+    padding:30px;
+    
+    }   /*Descripciones*/ 
+    .cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.cgb,.chb,.cib,.cjb{
+        background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
+        color: navy;
+        text-align: center;
+        align-items: center;
+    height: 50px; 
+    margin-top: 30px; 
+    padding-top: 10px;      
+    }/*Si la pantalla es menor a esto se acomodarán los recuadros*/
+    .cib{
+        height: 80px;
+    }
+.cfb{
+    height: 50px;
+}
+.cdb{
+    height: 50px;
+}
+.chb{
+    height: 80px;
+}
+.ceb{
+    height: 70px;
+}
+@media(max-width:1000px){
+.cbb,.ccb,.cgb,.cjb{
+    height: 80px;
+}
+.cdb,.cfb{
+    height: 90px;
+}
+.cib{
+    height: 120px;
+}
+}
+@media(min-width:870px)and (max-width:1000px){
+    .first, .second{
+        display: flex;   
+
+}.servicios{
+    margin-top: 60px;
+    width: 100%; 
+    }}
+    @media(max-width:800px){
+        .cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.cgb,.chb,.cib,.cjb{
+            height: 40px;
+        }
+     .first, .second{        
+        flex-direction: column ;
+        padding: 60px;
+        
+     } 
+     .ca,.cb,.cc,.cd,.ce,.cf,.cg,.cg,.ch,.ci,.cj{
+         margin: 40px;
+     }
+     .ci{
+         margin-bottom: 70px;
+     }
+     .ce{
+         margin-bottom: 70px;
+     }
+.cg{
+    margin-bottom: 70px;
+}
+.cj{
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
+.cjb{
+    margin: 10px;
+}
+.cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.chb,.cib,.cjb{
+    height:50px ;
+}
+@media(max-width:650px){
+    
+.cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.chb,.cib,.cjb{
+    height:50px ;
+}
+}
+    }/*Footer*/
+.footer{
+    background-color: black;
+    color: white;
+    height: 60vh;
+    }
+    .caf{
+    margin: 0;
+    padding: 0;
+text-align: center;
+}
+.cbf{
+    display: flex;
+    top: 70px;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 35%;
+
+}
+.ccf{
+    padding-right: 2%;
+}
+.cdf{
+    border-left: 2px solid white;
+}
+.ucdf li{
+margin-left: 10px;
+    padding: 5px;
+    list-style:none
+}
+@media(max-width:700px){
+    .cbf{
+        padding-left: 20%;
+    }
+    .ca,.cb,.cc,.cd,.ce,.cf,.cg,.cg,.ch,.ci,.cj{
+        padding: 70px;
+    }
+}
+
+
+
+
+
+     /*Redes sociales*/
+     /*No se muestra el boton*/
+     #btn-mas{
+         display: none;
+     }/*El contenedor de todos los contactos*/
+     .container-all{
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         z-index: 100;
+     }/*Edicion de los enlaces y del label*/
+     .net a, .btn-mas label{
+         display: block;
+         text-decoration: none;
+         background: navy;
+         color:white;
+         width: 55px;
+         height: 55px;
+         line-height: 55px;
+         text-align: center;
+         border-radius: 50%;
+         box-shadow: 0px 1px 10px rgba(0, 0, 0, 4);
+         transition: all 500ms ease;
+     }/*Se muestra una pequeña animación*/
+     .net a:hover{
+         background: white;
+         color: blue;
+     }/*Se oculta el menu*/
+     .net a{
+         margin-bottom: -15px;
+         opacity: 0;
+         visibility: hidden;
+     }/*Si el btn está checked, aparece el menu*/
+     #btn-mas:checked~.net a{
+         margin-bottom: 10px;
+         opacity: 1;
+         visibility: visible;
+     }/*Botón de whatsapp*/
+     .wsp{
+         display: block;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        position: relative;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+        }/*Hace una animación al estar presionado*/
+        .wsp:hover{
+            cursor: pointer;
+            background-color: rgba(0, 100, 0, 100);
+        }/*Botón de whatsapp*/
+        .wsp-a{
+                display: block;
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+                border-radius: 50px;
+                text-align: center;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+        }/*Botón de email*/
+        .email{
+            display: block;
+            width: 60px;
+            height: 60px;   
+        }/*El tamaño de la letra de "contactos"*/
+        .btn-mas label{
+            font-size: small;
+        }/*Spans*/
+        .a ,.b,.c,.d{
+            position: relative;
+            right: 60px;
+            bottom: 50px;
+            background-color: rgb(66, 141, 211);
+        }
+        
