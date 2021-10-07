@@ -629,3 +629,10 @@ margin-left: 10px;
             background-color: rgb(66, 141, 211);
         }
         
+
+        @media(max-width:300px){
+            .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
+                width: 200px;
+
+            }
+        }
