@@ -632,7 +632,6 @@ margin-left: 10px;
 
         @media(max-width:300px){
             .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
-                width: 200px;
-
+        width:200px
             }
         }
