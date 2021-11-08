@@ -10,6 +10,9 @@ body{
 /*Estilos generales del cuerpo*/
 }/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
 /*logo*/
+html{
+    font-size:16px;
+}
 .container{
     float: right;
 }
@@ -21,29 +24,43 @@ body{
     margin-bottom: 20px;
     background:radial-gradient(white 40%,rgb(66, 141, 211)) ;
     color: blue;
-    width:45%
+    width:35%
+}/*Nuevo*/
+@media(max-width:500px){
+    
+    .container-second{
+        width:60%;
+        margin-left:30%;
+    }
+    .container-c h2{
+        font-size: 1.2rem;
+    }
+    .img-a{
+        width: 50%;
+    }
+    .ul-a li{
+        font-size: 1.3rem;
+    }
+
+}
+@media(max-width:700px){
+    .ul-a li{
+        font-size: 1.5rem;
+    }
 }
 .container-second h1{
     align-items:center;
 }
 /*el div de la cabecera*/
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}/*Sirve para colocar todo sin que se rompa*/
-body{
-    background-color:azure;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-/*Estilos generales del cuerpo*/
-}/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
+/*Sirve para colocar todo sin que se rompa*/
+/*background: radial-gradient(circle at 65% 0,white,rgb(173, 184, 231));*/
 /*logo*/
 .container{
     float: right;
 }
 /*el div de la cabecera*/
 .div{
+    max-width: 100%;
     float:inline-end;
 }/*la cabecera*/
 header{
@@ -70,10 +87,15 @@ cursor:pointer;
 background-color: rgba(0, 0, 0, 0.3);
 }/*Acomoda la imagen del logo*/
 .imga{
-   width: 100%;
+   max-width: 100%;
     height: 100px;
 border: none;
 }/*posiciona el navegador de botones*/
+@media(max-width:500px){
+    .div{
+        width: 60%;
+    }
+}
 .container-ul{
     position: relative;
     top: 60px;
@@ -152,13 +174,16 @@ width: 30%;
  }/*El div que contiene todos*/
  .container-a{
     
-    width: 100%;
+    max-width: 100%;
 height: 90vh;
     position:relative;
     top: 0;
     left: 0;
     background: linear-gradient(to right,white,80%,rgb(66, 141, 211));        
- } /*el div que contiene todo lo que está dentro de la imagen*/
+ } 
+
+    
+    /*el div que contiene todo lo que está dentro de la imagen*/
  .container-b{
      background-color: white;
      position:absolute;
@@ -224,7 +249,7 @@ margin-left: 20%;
      position: relative;
      top: 0;
      left: 0;
-     width: 100%;
+     max-width: 100%;
      height: 70vh;
  }/*Texto*/
  .container-f{
@@ -242,7 +267,7 @@ margin-left: 20%;
      color:blue;
      font-size: 1.6rem;
      }/*El estilo de las listas*/
- 
+
      .ul-b li{
 font-size: 2rem;
 color: blue;
@@ -254,6 +279,14 @@ padding: 8px;
         padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
         color:blue; /* Coloreamos la viñeta */
      }/*Subtitulo*/
+     @media(max-width:500px){
+        .head-a{
+            font-size: 1.2rem;
+        }
+        .ul-b li{
+            font-size:1.6rem;
+        }
+    }
      .container1{
         padding: 5px;
         padding-left: 20px;
@@ -376,6 +409,21 @@ opacity: 0.8;
          color :rgb(0, 225, 255);
          background-color: white;
      }/*Dibujo del reloj del ´primer recuadro*/
+     @media(max-width:500px){
+            .boton-e{
+                top: 50%;
+                background-color:rgb(0, 225, 255);
+                padding: 1px;
+                border:2px;
+                border-radius: 5px;
+                margin-left: 1px;
+                box-shadow: 20px 0px 0px transparent;
+                color: white;
+                text-decoration: none;
+                font-size: .8rem;
+            
+            }
+     }
      .icon-clock{
          position: relative;
          top: 20%;
@@ -388,7 +436,26 @@ opacity: 0.8;
         font-size: 50px;
     color: white; 
     }
-    
+    @media(max-width:500px){
+        .head-c{
+            font-size: 1.05rem;
+        }
+        .p-a{
+            font-size: 1rem;
+        }
+        .head-d{
+            font-size: .85rem;
+        }
+        .span-f{
+        margin-top: 10px;    
+        }
+        .head-e{
+            font-size: .8rem;
+        }
+        .head-f{
+            font-size: .8rem;
+        }
+    }
 /*Servicios titulo*/
     .servicios1{
         padding: 5px;
@@ -402,17 +469,19 @@ opacity: 0.8;
         text-align: center; 
     
     }
+
+
     /*Servicios*/
 .servicios{
     margin-top: 60px;
-    width: 100%; 
+    max-width: 100%; 
     }/*Primer recuadro*/
     .first, .second{
         display: flex;   
     }/*Las imagenes*/
     .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
-        width: 100%;
-        border-radius: 100%;
+        max-width: 100%;
+        border-radius: 50%;
         border-bottom: 2px ;
     }/*El background de las imagenes*/
     .caa,.cba,.cca,.cda,.cea,.cfa,.cga,.cga,.cha,.cia,.cja{
@@ -454,67 +523,43 @@ opacity: 0.8;
 .ceb{
     height: 70px;
 }
-@media(max-width:1000px){
-.cbb,.ccb,.cgb,.cjb{
-    height: 80px;
-}
-.cdb,.cfb{
-    height: 90px;
-}
-.cib{
-    height: 120px;
-}
-}
-@media(min-width:870px)and (max-width:1000px){
+
+@media(min-width:300px)and (max-width:800px){
     .first, .second{
-        display: flex;   
+        display:block;   
 
 }.servicios{
     margin-top: 60px;
-    width: 100%; 
+    max-width: 90%; 
     }}
-    @media(max-width:800px){
-        .cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.cgb,.chb,.cib,.cjb{
-            height: 40px;
-        }
-     .first, .second{        
-        flex-direction: column ;
-        padding: 60px;
-        
-     } 
-     .ca,.cb,.cc,.cd,.ce,.cf,.cg,.cg,.ch,.ci,.cj{
-         margin: 40px;
-     }
-     .ci{
-         margin-bottom: 70px;
-     }
-     .ce{
-         margin-bottom: 70px;
-     }
-.cg{
-    margin-bottom: 70px;
+ 
+@media(min-width:800px)and (max-width:1000px){
+    .first,.second{
+        display:flex;
+    }
+    .cbb,.ccb,.cdb,.cfb,.cjb{
+        height: 80px;
+    }
 }
-.cj{
-    padding-bottom: 70px;
-    margin-bottom: 70px;
+
+@media(max-width:500px){
+    .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
+        width: 100%;
+        height: 40vh;
+
 }
-.cjb{
-    margin: 10px;
-}
-.cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.chb,.cib,.cjb{
-    height:50px ;
-}
-@media(max-width:650px){
-    
-.cab,.cbb,.ccb,.cdb,.ceb,.cfb,.cgb,.chb,.cib,.cjb{
-    height:50px ;
+.ccb,.cdb,.cfb{
+    height: 10vh;
 }
 }
-    }/*Footer*/
+    /*Footer*/
 .footer{
     background-color: black;
     color: white;
     height: 60vh;
+    }
+    .container-footer{
+        max-width: 100%;
     }
     .caf{
     margin: 0;
@@ -548,7 +593,15 @@ margin-left: 10px;
         padding: 70px;
     }
 }
-
+@media(max-width:500px){
+    .container-footer{
+        width:10%;
+    }
+    .caf{
+        margin-left: 100px;
+        padding-bottom: 20px;
+    }
+}
 
 
 
@@ -563,7 +616,16 @@ margin-left: 10px;
          bottom: 20px;
          right: 20px;
          z-index: 100;
-     }/*Edicion de los enlaces y del label*/
+     }
+     @media(max-width:500px){
+         .container-all{
+             position: fixed;
+             bottom: 20px;
+             right: 10px;
+             z-index:100;
+         }
+     }
+     /*Edicion de los enlaces y del label*/
      .net a, .btn-mas label{
          display: block;
          text-decoration: none;
@@ -629,9 +691,3 @@ margin-left: 10px;
             background-color: rgb(66, 141, 211);
         }
         
-
-        @media(max-width:200px){
-            .ima,.imb,.imc,.imd,.ime,.imf,.img,.imh,.imi,.imj{
-        width:100px
-            }
-        }
