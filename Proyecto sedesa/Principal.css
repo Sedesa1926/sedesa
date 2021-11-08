@@ -554,6 +554,8 @@ opacity: 0.8;
 }
     /*Footer*/
 .footer{
+    margin-top: 50px;
+    padding-top: 50px;
     background-color: black;
     color: white;
     height: 60vh;
