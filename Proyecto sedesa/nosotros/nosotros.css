@@ -17,6 +17,11 @@ body{
 .div{
     float:inline-end;
 }/*la cabecera*/
+@media(max-width:500px){
+    .div{
+        width: 60%;
+    }
+}
 header{
     width: 100%;
     height: 100px;
@@ -140,6 +145,11 @@ main{
     top: 35%;
     left: 35%
 }
+@media(max-width:500px){
+    .container-third{
+        width: 50%;
+    }
+}
 .trabajo{
     width: 100%;
     height: 50vh;
@@ -176,11 +186,13 @@ border-right: 1px solid black;
 .footer{
     margin: 0;
     padding: 0;
-}
-.container-footer{
     background-color: black;
     color: white;
     height: 60vh;
+}
+.container-footer{
+
+    max-width:100%
     }
     .caf{
     margin: 0;
@@ -210,7 +222,19 @@ margin-left: 10px;
     .cbf{
         padding-left: 10%;
     }
-}     /*Redes sociales*/
+}
+
+@media(max-width:500px){
+    .container-footer{
+        width:10%;
+    }
+    .caf{
+        margin-left: 100px;
+        padding-bottom: 20px;
+    }
+}
+
+/*Redes sociales*/
      /*No se muestra el boton*/
      #btn-mas{
         display: none;
@@ -220,7 +244,16 @@ margin-left: 10px;
         bottom: 20px;
         right: 20px;
         z-index: 100;
-    }/*Edicion de los enlaces y del label*/
+        
+    } @media(max-width:500px){
+        .container-all{
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            z-index:100;
+        }
+    }
+    /*Edicion de los enlaces y del label*/
     .net a, .btn-mas label{
         display: block;
         text-decoration: none;
@@ -285,4 +318,4 @@ margin-left: 10px;
            bottom: 50px;
            background-color: rgb(66, 141, 211);
        }
-       
+    
