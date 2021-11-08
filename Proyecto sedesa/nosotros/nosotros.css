@@ -184,8 +184,8 @@ border-right: 1px solid black;
 
 /*Footer*/
 .footer{
-    margin: 0;
-    padding: 0;
+    margin-top: 50px;
+    padding-top: 50px;
     background-color: black;
     color: white;
     height: 100vh;
