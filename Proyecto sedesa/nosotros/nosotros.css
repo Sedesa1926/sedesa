@@ -227,7 +227,7 @@ margin-left: 10px;
 @media(max-width:500px){
     .container-footer{
         width:10%;
-        height:90vh
+        height: 90vh;
     }
     .caf{
         margin-left: 100px;
