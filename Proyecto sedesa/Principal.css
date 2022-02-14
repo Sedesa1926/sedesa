@@ -354,6 +354,13 @@ opacity: 0.8;
      .p-a{
          top: 150px;
      }
+  @media (max-width: 500px) {
+        
+        .p-a{
+            position: relative;
+            top:40% ;
+        }
+    }
      /*El texto del segundo recuadro*/
      .head-d, .span-e,.span-f{
         position: relative;
