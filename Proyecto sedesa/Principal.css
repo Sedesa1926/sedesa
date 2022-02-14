@@ -354,7 +354,7 @@ opacity: 0.8;
      .p-a{
          top: 150px;
      }
-  @media (max-width: 500px) {
+  @media (min-width: 300px)and (max-width:500px) {
         
         .p-a{
             position: relative;
