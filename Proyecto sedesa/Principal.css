@@ -424,6 +424,24 @@ opacity: 0.8;
             
             }
      }
+     @media(min-width:300px) and (max-width:500px){
+         .boton-e{
+             padding: 5px;
+             border: 5px;
+             border-radius: 5px;
+         margin-left: 5px;
+
+         }
+     }
+     @media(min-width:300px) and (max-width:400px){
+        .boton-e{
+            padding: 1.25px;
+            border: 1.25px;
+            border-radius: 1.25px;
+        margin-left: 1.25px;
+
+        }
+    }
      .icon-clock{
          position: relative;
          top: 20%;
