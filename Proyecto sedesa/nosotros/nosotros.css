@@ -14,9 +14,7 @@ body{
     float: right;
 }
 /*el div de la cabecera*/
-.div{
-    float:inline-end;
-}/*la cabecera*/
+/*la cabecera*/
 @media(max-width:500px){
     .div{
         width: 60%;
